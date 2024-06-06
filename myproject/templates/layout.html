@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}
+            My Django App
+        {% endblock %}
+    </title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="brand">
+        <h2 class="brand-text">
+            <a href="/">
+                <span role="img" aria-label="Home">
+                    My Project
+                </span>
+            </a>
+        </h2>
+        <nav class="brand-menu">
+            <ul>
+                <li>
+                    <a class="brand-link" href="/">Home</a>
+                </li>
+                <li>
+                    <a class="brand-link" href="/about">About</a>
+                </li>
+                <li>
+                    <a class="brand-link" href="{% url "posts:list" %}">Blog</a>
+                </li>
+                <li>
+                    <a class="brand-link" href="/contact">Contact</a>
+                </li>
+                <li>
+                    <a class="brand-link" href="/admin">Admin</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer class="footer">
+        <div class="footer-text">
+            <a href="/" class="footer-text-link">
+                My Project
+            </a>
+            <a target="blank" href="https://github.com/noumecha" class="footer-text-link">
+                <code>
+                    &copy; 2024 | Noumecha Spaker
+                </code>
+            </a>
+        </div>
+    </footer>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

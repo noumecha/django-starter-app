@@ -1,0 +1,175 @@
+* {
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.brand {
+    background-color: green;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.brand .brand-text a {
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+    font-size: 28px;
+    text-decoration: none;
+}
+.brand .brand-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.brand .brand-menu ul {
+    list-style-type: none;
+    display: flex;
+}
+.brand .brand-menu ul li .brand-link {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 18px;
+}
+.brand .brand-menu ul li .brand-link:hover {
+    color: green;
+    background: white;
+}
+
+/**
+* Header styles
+*/
+.header {
+    display: flex;
+    background-color: black;
+    padding: 40px;
+    height: 50vh;
+    align-items: center;
+    justify-content: center;
+}
+.header .header-text {
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+}
+/**
+* Footer styles
+*/
+.footer {
+    display: flex;
+    padding: 40px;
+    margin-top: 40px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: green;
+}
+.footer .footer-text {
+    display: flex;
+}
+.footer .footer-text .footer-text-link {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10 20px;
+    font-weight: bold;
+}
+.footer .footer-text .footer-text-link a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10 20px;
+    font-weight: bold;
+}
+
+/**
+* Post styles
+*/
+.post-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: 40px;
+}
+.post-section .post-card {
+    position: relative;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 300px;
+    align-items: center;
+    justify-content: center;
+}
+.post-section .post-card .post-card-title {
+    text-transform: uppercase;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    width: 100%;
+    background-color: green;
+    text-align: center;
+    padding:10px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+.post-section .post-card .post-card-body {
+    color: white;
+    text-align: justify;
+    padding:10px;
+    font-size: 22px;
+    font-weight: bold;
+}
+.post-section .post-card .post-card-date {
+    text-transform: uppercase;
+    padding:10px;
+    font-style: italic;
+    color: white;
+    font-size: 18px;
+}
+.post-section .post-card .post-card-button {
+    text-transform: uppercase;
+    padding:10px;
+    background: white;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 18px;
+}
+.post-section .post-card .post-card-button:hover {
+    border: 1px solid white;
+    color: white;
+    background-color: transparent;
+}
+/**
+* post page styles
+*/
+.post-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /*margin-top: 20px;*/
+}
+.post-page-container .post-page-image {
+    width: 100%;
+    object-fit: cover;
+    height: 500px;
+}
+.post-page-container .post-page-date {
+    margin-top: 20px;
+    font-size: 18px;
+    padding: 20px;
+}
+.post-page-container .post-page-content {
+    font-size: 24px;
+    padding: 20px;
+}

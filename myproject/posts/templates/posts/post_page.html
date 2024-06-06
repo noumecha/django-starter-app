@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Post Page
+{% endblock  %}
+
+{% block content %}
+    <div class="header">
+        <h1 class="header-text">
+            Post : {{ post.title }}
+        </h1>
+    </div>
+    <div class="post-page-container">
+        <img class="post-page-image" src="{{ post.banner.url }}" alt="post.title">
+        <code class="post-page-date">
+            {{ post.date }}
+        </code>
+        <p class="post-page-content">
+            {{ post.body }}
+        </p>
+    </div>
+{% endblock %}
