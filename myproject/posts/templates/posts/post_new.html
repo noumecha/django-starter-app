@@ -10,7 +10,13 @@
             Create a New Post
         </h1>
     </div>
-    <div class="post-page-container">
-        
+    <div class="register-form-container">
+        <form class="register-form" action="{% url 'posts:new-post' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form }}
+            <button class="register-button" type="submit">
+                Create
+            </button>
+        </form>
     </div>
 {% endblock %}

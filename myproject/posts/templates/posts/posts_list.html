@@ -20,7 +20,7 @@
                     {{ post.body }}
                 </p>
                 <code class="post-card-date">
-                    {{ post.date }}
+                    {{ post.date }} by {{ post.author }}
                 </code>
                 <a href="{% url 'posts:page' slug=post.slug %}" class="post-card-button">
                     Show post
