@@ -173,3 +173,65 @@
     font-size: 24px;
     padding: 20px;
 }
+/**
+* Register form styles
+*/
+.register-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+.register-form-container .register-form {
+    background-color: black;
+    color: white;
+    padding: 40px;
+}
+.register-form-container .register-form .errorlist li {
+    color: red;
+}
+.register-form-container .register-form div {
+    display: flex;
+    flex-direction: column;
+}
+.register-form-container .register-form div label {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+}
+.register-form-container .register-form div input {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+}
+.register-form-container .register-form .register-button {
+    padding: 10px 20px;
+    color: white;
+    font-size: 18px;
+    margin-top: 20px;
+    outline: none;
+    border: none;
+    background-color: green;
+    cursor: pointer;
+    /*transition: ease-in-out 1s;*/
+}
+.register-form-container .register-form .register-button:hover {
+    background-color: white;
+    color: green;
+}
+/**
+* logout button
+*/
+.logout-button {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    background-color: transparent;
+    font-size: 18px;
+    border: none;
+}
+.logout-button:hover {
+    color: green;
+    background: white;
+}

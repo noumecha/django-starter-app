@@ -31,11 +31,28 @@
                 <li>
                     <a class="brand-link" href="{% url "posts:list" %}">Blog</a>
                 </li>
+                {% if user.is_authenticated %}
+                    <li>
+                        <a class="brand-link" href="{% url "posts:new-post" %}">New Post</a>
+                    </li>
+                    <li>
+                        <form class="logout" role="form" action="{% url "users:logout" %}" method="post">
+                            {% csrf_token %}
+                            <button class="logout-button" type="submit">
+                                logout
+                            </button>
+                        </form>
+                    <li>
+                {% else %}
+                    <li>
+                        <a class="brand-link" href="{% url "users:register" %}">Register</a>
+                    </li>
+                    <li>
+                        <a class="brand-link" href="{% url "users:login" %}">Login</a>
+                    </li>
+                {% endif %}
                 <li>
                     <a class="brand-link" href="/contact">Contact</a>
-                </li>
-                <li>
-                    <a class="brand-link" href="/admin">Admin</a>
                 </li>
             </ul>
         </nav>
@@ -47,11 +64,14 @@
     <footer class="footer">
         <div class="footer-text">
             <a href="/" class="footer-text-link">
-                My Project
+                My Project 
+            </a>
+            <a class="footer-text-link" href="/admin">
+                &nbsp; | Admin &nbsp; |
             </a>
             <a target="blank" href="https://github.com/noumecha" class="footer-text-link">
                 <code>
-                    &copy; 2024 | Noumecha Spaker
+                    &nbsp; &copy; 2024 | Noumecha Spaker
                 </code>
             </a>
         </div>
